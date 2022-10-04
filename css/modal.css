@@ -85,7 +85,7 @@
 @media (max-width:480px){
     .modal{
         top:100%;
-        transition: all 1s ease;
+        transition: all 1s;
     }
     .modal.active{
         top:0;

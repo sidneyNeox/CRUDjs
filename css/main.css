@@ -5,10 +5,10 @@
 }
 
 :root{
-    --primary-color: #FFBA00;
-    --secundary-color: #FFF1CC;
+    --primary-color: #00ff37;
+    --secundary-color: #adfdb1;
     --shadow-color: #CCC;
-    --text-color: #FFF;
+    --text-color: #FFFFFF;
 }
 
 body{
@@ -17,6 +17,7 @@ body{
     flex-direction: column;
     font-family: 'karla', sans-serif;
     position:relative;
+    background-color: #1F2630;
 }
 
 header{
@@ -42,6 +43,7 @@ main{
     padding: 50px;
     box-shadow: 2px 2px 10px var(--shadow-color);
     gap: 20px;
+    background-color: #ffffff;
 }
 
 footer{
@@ -50,6 +52,10 @@ footer{
     font-weight: 200;
     font-style: italic;
     padding: 20px;
+}
+
+footer{
+    color: #FFFFFF
 }
 
 @media (max-width:480px){
