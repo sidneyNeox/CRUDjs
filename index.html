@@ -15,68 +15,39 @@
 </head>
 <body>
     <header>
-        <h1 class="header-title">Cadastro de Clientes</h1>
+        <h1 class="header-title">Cadastro de Alunos</h1>
     </header>
     <main>
-        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
-        <table class="records">
+        <button type="button" class="button blue mobile" id="register">Cadastrar Aluno</button>
+        <table id="tableClient" class="records">
             <thead>
                 <tr>
                     <th>Nome</th>
+                    <th>Matricula</th>
                     <th>E-mail</th>
-                    <th>Celular</th>
-                    <th>Cidade</th>
+                    <th>Curso</th>
                     <th>Ação</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Maria</td>
-                    <td>maria@gmail.com</td>
-                    <td>(11) 97165-1111</td>
-                    <td>Anapolis</td>
-                    <td>
-                        <button type="button" class="button green">editar</button>
-                        <button type="button" class="button red">excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>João Pedro</td>
-                    <td>joao@gmail.com</td>
-                    <td>(11) 97165-2222</td>
-                    <td>Jandira</td>
-                    <td>
-                        <button type="button" class="button green">editar</button>
-                        <button type="button" class="button red">excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Jose da Silva</td>
-                    <td>jose@gmail.com</td>
-                    <td>(11) 97165-3333</td>
-                    <td>São Roque</td>
-                    <td>
-                        <button type="button" class="button green">editar</button>
-                        <button type="button" class="button red">excluir</button>
-                    </td>
-                </tr>
+                <!-- Tabela aplicada com javascript -->
             </tbody>
         </table>
         <div class="modal" id="modal">
             <div class="modal-content">
                 <header class="modal-header">
-                    <h2>Novo Cliente</h2>
+                    <h2>Cadastro de aluno</h2>
                     <span class="modal-close" id="modalClose">&#10006;</span>
                 </header>
-                <form class="modal-form">
-                    <input type="text" class="modal-field" placeholder="Nome do Cliente">
-                    <input type="email" class="modal-field" placeholder="e-mail do Cliente">
-                    <input type="text" class="modal-field" placeholder="Celular do Cliente">
-                    <input type="text" class="modal-field" placeholder="Cidade do Cliente">
+                <form id="form" class="modal-form">
+                    <input id="name" type="text" data-index="new" class="modal-field" placeholder="Nome do Aluno" required>
+                    <input id="registration" type="number" class="modal-field" placeholder="Matricula do Aluno (sem zeros)" min="1" max="999999" required>
+                    <input id="email" type="email" class="modal-field" placeholder="e-mail do Cliente" required>
+                    <input id="course" type="text" class="modal-field" placeholder="Curso do aluno" required>
                 </form>
                 <footer class="modal-footer">
-                    <button class="button green">Salvar</button>
-                    <button class="button blue" id="modal-cancel">Cancelar</button>
+                    <button class="button green" id="save-form">Salvar</button>
+                    <button class="button blue" id="cancel-form">Cancelar</button>
                 </footer>
             </div>
         </div>

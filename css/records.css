@@ -4,6 +4,10 @@
     text-align: left;
 }
 
+td{
+    text-transform: uppercase;
+}
+
 .records th{
     height: 50px;
     background-color: var(--primary-color);
@@ -26,7 +30,7 @@
     background-color: var(--secundary-color);
 }
 
-@media(max-width:480px){
+@media(max-width:1024px){
     .records{
         border-spacing: 5px;
     }
@@ -49,4 +53,15 @@
     .records tr:hover{
         background-color: inherit;
     }
+
+    tr{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    
+    tr:first-child{
+        margin-top: 50px;
+    }
+    
 }
